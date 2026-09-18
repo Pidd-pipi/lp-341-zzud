@@ -61,3 +61,6 @@ const (
 	FollowUpPending = "pending"
 	FollowUpDone    = "done"
 )
+
+// FollowUpHighPriorityDays 待复查自记录时间起满 N 天标记为高优先级（历史记录同样按记录时间计算）。
+const FollowUpHighPriorityDays = 7

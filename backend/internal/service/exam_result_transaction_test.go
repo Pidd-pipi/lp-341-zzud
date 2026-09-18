@@ -3,6 +3,7 @@ package service
 import (
 	"context"
 	"testing"
+	"time"
 
 	"github.com/blueship581/gbcheckup/internal/model"
 	"github.com/blueship581/gbcheckup/internal/repository"
@@ -36,7 +37,7 @@ func TestExamResultService_EnterAbnormalCreatesMetric(t *testing.T) {
 	if !entered.IsAbnormal {
 		t.Fatal("expected abnormal result")
 	}
-	metrics, _, err := metricRepo.List(examinee.ID, 1, 10)
+	metrics, _, err := metricRepo.List(examinee.ID, 1, 10, time.Now())
 	if err != nil {
 		t.Fatal(err)
 	}

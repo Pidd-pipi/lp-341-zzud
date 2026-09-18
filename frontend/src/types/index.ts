@@ -88,6 +88,8 @@ export interface AbnormalMetric {
   trend_json: string;
   follow_up_status: string;
   specialist_advice: string;
+  high_priority: boolean;
+  created_at: string;
   package_item?: PackageItem;
 }
 

@@ -98,7 +98,7 @@ type GroupOrderRequest struct {
 // FollowUpRequest 复查跟踪请求。
 type FollowUpRequest struct {
 	Status  string `json:"status" binding:"required,oneof=pending done"`
-	Advice  string `json:"specialist_advice" binding:"max=500"`
+	Advice  string `json:"specialist_advice" binding:"required_if=Status done,max=500"`
 }
 
 // TokenResponse 令牌响应。

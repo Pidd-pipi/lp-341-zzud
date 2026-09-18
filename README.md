@@ -142,8 +142,8 @@ lp-341/
 | POST | `/api/v1/reports/:id/review` | admin/doctor | 审核报告 |
 | POST | `/api/v1/reports/:id/publish` | admin/doctor | 发布报告 |
 | GET | `/api/v1/reports/:id/pdf` | admin/doctor | 下载报告 PDF |
-| GET | `/api/v1/abnormal-metrics` | admin/doctor/examinee | 异常指标列表 |
-| PUT | `/api/v1/abnormal-metrics/:id/follow-up` | admin/doctor/examinee | 异常指标随访 |
+| GET | `/api/v1/abnormal-metrics` | admin/doctor/examinee | 异常指标列表（待复查满 7 天按记录时间标记高优先级并置顶，已复查沉底） |
+| PUT | `/api/v1/abnormal-metrics/:id/follow-up` | admin/doctor/examinee | 异常指标随访（标记已复查必填专科建议，状态与建议同事务保存） |
 | POST | `/api/v1/enterprises` | admin/front_desk | 创建团检企业 |
 | GET | `/api/v1/enterprises` | admin/front_desk | 企业列表 |
 | POST | `/api/v1/enterprises/orders` | admin/front_desk | 创建团检订单 |

@@ -49,7 +49,15 @@ export const PackageTypeLabels: Record<string, string> = {
   other: '其他',
 };
 
+export const FollowUpStatus = {
+  PENDING: 'pending',
+  DONE: 'done',
+} as const;
+
 export const FollowUpStatusLabels: Record<string, string> = {
-  pending: '待复查',
-  done: '已复查',
+  [FollowUpStatus.PENDING]: '待复查',
+  [FollowUpStatus.DONE]: '已复查',
 };
+
+// 待复查自记录时间起满 N 天标记高优先级，与 backend FollowUpHighPriorityDays 保持一致
+export const FOLLOW_UP_HIGH_PRIORITY_DAYS = 7;

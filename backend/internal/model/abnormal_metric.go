@@ -13,6 +13,8 @@ type AbnormalMetric struct {
 	TrendJSON       string    `gorm:"type:text" json:"trend_json"`
 	FollowUpStatus  string    `gorm:"size:20;default:pending" json:"follow_up_status"`
 	SpecialistAdvice string   `gorm:"size:500" json:"specialist_advice"`
+	// HighPriority 复查到期分级：待复查且自记录时间起满 FollowUpHighPriorityDays 天（非持久化，查询时按记录时间计算）。
+	HighPriority    bool      `gorm:"-" json:"high_priority"`
 	CreatedAt       time.Time `json:"created_at"`
 	PackageItem     PackageItem `gorm:"foreignKey:PackageItemID" json:"package_item,omitempty"`
 }
