@@ -78,6 +78,30 @@ func RoleText(role string) string {
 	}
 }
 
+// FollowUpStatusText 复查状态中文文案。
+func FollowUpStatusText(status string) string {
+	switch status {
+	case "pending":
+		return "待复查"
+	case "done":
+		return "已复查"
+	default:
+		return "未知"
+	}
+}
+
+// FollowUpPriorityText 复查到期分级中文文案。
+func FollowUpPriorityText(priority string) string {
+	switch priority {
+	case "high":
+		return "高优先级"
+	case "normal":
+		return "普通优先级"
+	default:
+		return "未知"
+	}
+}
+
 // FormatReferenceRange 参考值范围格式化。
 func FormatReferenceRange(rng string) string {
 	if rng == "" {

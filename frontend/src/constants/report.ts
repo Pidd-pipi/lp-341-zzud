@@ -53,3 +53,17 @@ export const FollowUpStatusLabels: Record<string, string> = {
   pending: '待复查',
   done: '已复查',
 };
+
+// 复查到期分级（与 backend/internal/constants/report.go 保持一致）
+export const FollowUpPriority = {
+  HIGH: 'high',
+  NORMAL: 'normal',
+} as const;
+
+export const FollowUpPriorityLabels: Record<string, string> = {
+  [FollowUpPriority.HIGH]: '高优先级',
+  [FollowUpPriority.NORMAL]: '普通优先级',
+};
+
+// 复查到期天数：待复查从记录时间起满 7 天显示高优先级
+export const FOLLOW_UP_OVERDUE_DAYS = 7;

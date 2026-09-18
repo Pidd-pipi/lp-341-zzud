@@ -87,7 +87,9 @@ export interface AbnormalMetric {
   ref_value_range: string;
   trend_json: string;
   follow_up_status: string;
+  follow_up_priority: string;
   specialist_advice: string;
+  created_at: string;
   package_item?: PackageItem;
 }
 

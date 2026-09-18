@@ -96,9 +96,10 @@ type GroupOrderRequest struct {
 }
 
 // FollowUpRequest 复查跟踪请求。
+// 标记已复查（status=done）时 specialist_advice 必填，该校验在 service 层完成（跨字段条件校验）。
 type FollowUpRequest struct {
-	Status  string `json:"status" binding:"required,oneof=pending done"`
-	Advice  string `json:"specialist_advice" binding:"max=500"`
+	Status string `json:"status" binding:"required,oneof=pending done"`
+	Advice string `json:"specialist_advice" binding:"max=500"`
 }
 
 // TokenResponse 令牌响应。

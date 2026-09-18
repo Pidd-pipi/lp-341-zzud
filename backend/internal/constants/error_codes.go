@@ -16,4 +16,6 @@ const (
 	CodeReportStatus    = 1401
 	CodeAbnormalLevel   = 1402
 	CodeRegStatus       = 1403
+	CodeFollowUpStatus  = 1404
+	CodeAdviceRequired  = 1405
 )

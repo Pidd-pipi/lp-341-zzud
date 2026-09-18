@@ -61,3 +61,12 @@ const (
 	FollowUpPending = "pending"
 	FollowUpDone    = "done"
 )
+
+// FollowUpPriority 复查到期分级（依据记录时间动态计算，不落库）。
+const (
+	FollowUpPriorityHigh   = "high"   // 高优先级：待复查且距记录时间已满复查期限
+	FollowUpPriorityNormal = "normal" // 普通优先级：未到期或已复查
+)
+
+// FollowUpOverdueDays 复查到期天数：待复查从记录时间起满 7 天为高优先级。
+const FollowUpOverdueDays = 7

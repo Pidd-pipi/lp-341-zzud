@@ -27,6 +27,7 @@ const (
 	LOG_REPORT_PDF_GENERATED        = "Report PDF generated"
 	LOG_ABNORMAL_METRIC_CREATED     = "AbnormalMetric created"
 	LOG_ABNORMAL_METRIC_FOLLOWUP    = "AbnormalMetric follow-up updated"
+	LOG_ABNORMAL_METRIC_FOLLOWUP_REJECTED = "AbnormalMetric follow-up update rejected"
 	LOG_ENTERPRISE_CREATED          = "Enterprise created"
 	LOG_GROUP_ORDER_CREATED         = "GroupOrder created"
 	LOG_GROUP_ORDER_DELIVERED       = "GroupOrder report delivered"

@@ -14,5 +14,7 @@ type AbnormalMetric struct {
 	FollowUpStatus  string    `gorm:"size:20;default:pending" json:"follow_up_status"`
 	SpecialistAdvice string   `gorm:"size:500" json:"specialist_advice"`
 	CreatedAt       time.Time `json:"created_at"`
+	// FollowUpPriority 复查到期分级，按记录时间动态计算，不落库。
+	FollowUpPriority string     `gorm:"-" json:"follow_up_priority"`
 	PackageItem     PackageItem `gorm:"foreignKey:PackageItemID" json:"package_item,omitempty"`
 }

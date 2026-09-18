@@ -26,6 +26,8 @@ const (
 	MsgReportNotFound   = "体检报告（Report）不存在"
 	MsgReportStatusInvalid = "报告状态（Report.status）流转不合法"
 	MsgAbnormalLevelInvalid = "异常等级（AbnormalLevel）不合法"
+	MsgFollowUpStatusInvalid = "复查状态（AbnormalMetric.follow_up_status）不合法"
+	MsgAdviceRequired       = "标记已复查（AbnormalMetric.follow_up_status=done）必须填写专科建议（specialist_advice）"
 	MsgInternalError    = "服务内部错误"
 	MsgParamInvalid     = "请求参数校验失败"
 	MsgRateLimited      = "请求过于频繁，请稍后重试"
